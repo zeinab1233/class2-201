@@ -78,14 +78,20 @@ switch(variable){
 
 */
 
+
+let userName = prompt('Hello, Could you please enter your name');
+alert(' hello ' + userName + ' welcome in my webpage ' );
+let score = 0;
  let maritalstate = prompt('are you married');
  console.log(maritalstate);
  switch (maritalstate.toUpperCase()) {
     case 'YES':
        alert('thats correct');
+       score++;
         break;
     case 'Y':
        alert('thats correct');
+       score++;
         break;
         case 'NO':
         alert('wrong answer, ive been married 3 years ago');
@@ -102,9 +108,11 @@ switch(variable){
  switch (travel.toUpperCase()) {
      case 'YES':
         alert('THIS IS RIGHT I LOVE VISITING NEW PLACES');
+        score++;
          break;
      case 'Y':
         alert('THIS IS RIGHT I LOVE VISITING NEW PLACES');
+        score++;
          break;
          case 'NO':
          alert('UNFORTIONATELY THIS IS WRONG ANSWER');
@@ -119,9 +127,11 @@ switch(variable){
          switch (nationality.toUpperCase()) {
              case 'YES':
                 alert('THIS IS RIGHT , great job');
+                score++;
                  break;
              case 'Y':
                 alert('THIS IS RIGHT , great job');
+                score++;
                  break;
              case 'NO':
                  alert('UNFORTIONATELY THIS IS WRONG ANSWER');
@@ -136,9 +146,11 @@ switch(variable){
         switch (food.toUpperCase()) {
              case 'YES':
                         alert('oh,yes i love mansaf');
+                        score++;
                          break;
                      case 'Y':
                         alert('oh,yes i love mansaf');
+                        score++;
                          break;
                      case 'NO':
                          alert(' WRONG ANSWER');
@@ -159,13 +171,50 @@ switch(variable){
                                  break;
                                  case 'NO':
                                  alert('thats correct, i hate action movies and i like comedy movies ');
+                                 score++;
                                  break;
                                  case 'N':
                                  alert('thats correct, i hate action movies and i like comedy movies');
+                                 score++;
                                  break;
                              
                                  }
-
+                                 
+                                 
+                                 
+                                    for (let i = 0; i <= 3; i++) {
+                                     let myAge = prompt('what is my age');
+                                    if (myAge == 28) {
+                                    alert('yes thats true ');
+                                    score++;
+                                    break;
+                                    } 
+                                    if (myAge > 28) {
+                                    alert('no iam younger than that ');
+                                    continue;
+                                    }  if (myAge < 28) {
+                                        alert('no iam older than that ');
+                                        continue;
+                                        } 
+                                    } alert(' i am 28 years old ');
+                                    
+                                   
+     let favpets = ['cats', 'dogs', 'hamesters', 'birds'];
+     
+       for (let i = 0; i < 6; i++) {
+        let ansr = prompt('what is my favourite pets');  
+        if ( ansr == favpets[0] || ansr == favpets[1] || ansr == favpets[2] || ansr == favpets[3] ) {
+            alert('yes thats true , my favourite pets are: cats , dogs , hamesters , and birds ');
+            score++;
+            break;
+            } if (ansr !== favpets ) {
+                alert(' sorry, wrong answer ');
+          continue;
+            }   
+       } alert(' your score is ' + score);
+                                    
+                                
+                                 
 /*Logical Operators:
 
 1. AND
