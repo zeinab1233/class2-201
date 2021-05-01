@@ -77,13 +77,13 @@ switch(variable){
 }
 
 */
-
-
-let userName = prompt('Hello, Could you please enter your name');
-alert(' hello ' + userName + ' welcome in my webpage ' );
 let score = 0;
- let maritalstate = prompt('are you married');
- console.log(maritalstate);
+function welcome () {
+ let userName = prompt('Hello, Could you please enter your name');
+ alert(' hello ' + userName + ' welcome in my webpage ' );
+ 
+  let maritalstate = prompt('are you married');
+  console.log(maritalstate);
  switch (maritalstate.toUpperCase()) {
     case 'YES':
        alert('thats correct');
@@ -102,8 +102,12 @@ let score = 0;
     
         
 }
+}
 
- let travel = prompt('do you like traveling');
+welcome();
+ 
+function travel() {
+let travel = prompt('do you like traveling');
 
  switch (travel.toUpperCase()) {
      case 'YES':
@@ -122,6 +126,10 @@ let score = 0;
          break;
      
          }
+        }
+        travel();
+        
+        function nationality() {
          let nationality = prompt('are u jordanian');
 
          switch (nationality.toUpperCase()) {
@@ -141,9 +149,13 @@ let score = 0;
                  break;
              
                  }
-         let food = prompt('do u like mansaf');
+                }
+                nationality();
 
-        switch (food.toUpperCase()) {
+             function food() {
+             let food = prompt('do u like mansaf');
+
+             switch (food.toUpperCase()) {
              case 'YES':
                         alert('oh,yes i love mansaf');
                         score++;
@@ -160,7 +172,12 @@ let score = 0;
                          break;
                      
                          }
-                         let actionmovies = prompt('do you like action movies');
+                        }
+                        food();
+
+                         
+                        function movie() {
+                            let actionmovies = prompt('do you like action movies');
 
                          switch (actionmovies.toUpperCase()) {
                              case 'YES':
@@ -179,9 +196,10 @@ let score = 0;
                                  break;
                              
                                  }
-                                 
-                                 
-                                 
+                                }
+                                movie();
+                                
+                                function age() {
                                     for (let i = 0; i <= 3; i++) {
                                      let myAge = prompt('what is my age');
                                     if (myAge == 28) {
@@ -197,24 +215,27 @@ let score = 0;
                                         continue;
                                         } 
                                     } alert(' i am 28 years old ');
-                                    
-                                   
-     let favpets = ['cats', 'dogs', 'hamesters', 'birds'];
-     
-       for (let i = 0; i < 6; i++) {
-        let ansr = prompt('what is my favourite pets');  
-        if ( ansr == favpets[0] || ansr == favpets[1] || ansr == favpets[2] || ansr == favpets[3] ) {
-            alert('yes thats true , my favourite pets are: cats , dogs , hamesters , and birds ');
-            score++;
-            break;
-            } if (ansr !== favpets ) {
-                alert(' sorry, wrong answer ');
-          continue;
-            }   
-       } alert(' your score is ' + score);
-                                    
+                                }
+                                age();
+
+                                function favpets() {
                                 
-                                 
+     
+                                for (let i = 0; i < 6; i++) {
+                                    let favpets = ['cats', 'dogs', 'hamesters', 'birds'];
+                                 let ansr = prompt('what is my favourite pets');  
+                                 if ( ansr == favpets[0] || ansr == favpets[1] || ansr == favpets[2] || ansr == favpets[3] ) {
+                                    alert('yes thats true , my favourite pets are: cats , dogs , hamesters , and birds ');
+                                    score++;
+                                    break;
+                                    } if (ansr !== favpets ) {
+                                        alert(' sorry, wrong answer ');
+                                  continue;
+                                    }   
+                               } alert(' your score is ' + score);
+                                     
+                            }
+                            favpets();
 /*Logical Operators:
 
 1. AND
